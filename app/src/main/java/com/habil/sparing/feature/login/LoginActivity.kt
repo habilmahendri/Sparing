@@ -44,8 +44,6 @@ class LoginActivity : AppCompatActivity(), LoginContract.View  {
                 toast("masukkan data dengan benar")
 
             }
-
-
         }
 
         btn_register.setOnClickListener {

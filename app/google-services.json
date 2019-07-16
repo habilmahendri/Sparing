@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "696278208976",
+    "firebase_url": "https://sparing-d3779.firebaseio.com",
+    "project_id": "sparing-d3779",
+    "storage_bucket": "sparing-d3779.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696278208976:android:749629c309dceec9",
+        "android_client_info": {
+          "package_name": "com.habil.sparing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696278208976-7d1s9mmilskjteqvhpnteqqplatvvm6a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.habil.sparing",
+            "certificate_hash": "c6defe4e0008a423ddf74828dfe879071099cb84"
+          }
+        },
+        {
+          "client_id": "696278208976-7v28k78geh7dpd36onuueoet37hgu4rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3qThAR4XDoXuu9XVkREWunUwoxp3AQvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696278208976-7v28k78geh7dpd36onuueoet37hgu4rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

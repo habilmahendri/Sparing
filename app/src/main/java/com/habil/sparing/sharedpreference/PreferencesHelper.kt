@@ -6,6 +6,7 @@ import android.preference.PreferenceManager
 import com.habil.adoption.data.PreferencesUtility.EMAIL
 import com.habil.adoption.data.PreferencesUtility.FULL_NAME
 import com.habil.adoption.data.PreferencesUtility.LOGIN
+import com.habil.adoption.data.PreferencesUtility.STARTUP
 import com.habil.adoption.data.PreferencesUtility.URL_PHOTO
 import com.habil.adoption.data.PreferencesUtility.USER_NAME
 
@@ -32,14 +33,28 @@ class PreferencesHelper {
         editor.apply()
     }
 
+
+    fun getLoggedStatus(context: Context): Boolean {
+        return getPreferences(context).getBoolean(LOGIN, false)
+    }
+
+    //save login session
+    fun setStartup(context: Context, startUp: Boolean) {
+        val editor = getPreferences(context).edit()
+        editor.putBoolean(STARTUP, startUp)
+        editor.apply()
+    }
+
+
+    fun getStartup(context: Context): Boolean {
+        return getPreferences(context).getBoolean(STARTUP, false)
+    }
+
     fun reset(context: Context): Boolean {
         val editor = getPreferences(context).edit().clear().commit()
         return editor
     }
 
-    fun getLoggedStatus(context: Context): Boolean {
-        return getPreferences(context).getBoolean(LOGIN, false)
-    }
 
     //save fullname user
     fun setFullName(context: Context, fullName: String) {

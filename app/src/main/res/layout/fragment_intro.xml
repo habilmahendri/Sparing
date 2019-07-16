@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".feature.splashscreen_intro.IntroFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_undraw_fans_gr54" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:fontFamily="@font/googlesans_bold"
+        android:text="Dengan Sparing\ncari lawan tanding jadi lebih mudah" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/googlesans_medium"
+        android:text="“Energi dan ketekunan mengalahkan segalanya”\n~Benjamin Franklin" />
+
+
+    <Button
+        android:layout_marginTop="40dp"
+        android:layout_width="150dp"
+        android:background="@drawable/bg_button"
+        android:text="Sign in"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/btn_send"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textSize="15sp" />
+</LinearLayout>

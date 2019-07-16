@@ -7,144 +7,143 @@
     android:orientation="vertical"
     tools:context=".feature.login.LoginActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="15dp"
-        android:src="@drawable/ic_undraw_good_doggy_4wfq" />
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="230dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginBottom="15dp"-->
+        <!--android:src="@drawable/ic_undraw_good_doggy_4wfq" />-->
+    <!---->
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--app:cardCornerRadius="8dp">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="15dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:fontFamily="@font/googlesans_bold"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Hello\nSign Into your Account"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="23sp" />-->
 
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        app:cardCornerRadius="8dp">
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:paddingLeft="3dp"-->
+                <!--android:fontFamily="@font/googlesans_medium"-->
+                <!--android:text="Username"-->
+                <!--android:textSize="17sp" />-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="15dp">
+            <!--<EditText-->
+                <!--android:id="@+id/edt_username"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableRight="@drawable/ic_assignment_ind_black_24dp"-->
+                <!--android:fontFamily="@font/googlesans_medium"-->
+                <!--android:hint="example_32"-->
+                <!--android:textSize="17sp" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/googlesans_bold"
-                android:gravity="center"
-                android:text="Hello\nSign Into your Account"
-                android:textColor="@color/black"
-                android:textSize="23sp" />
+            <!--<TextView-->
+                <!--android:fontFamily="@font/googlesans_medium"-->
 
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:paddingLeft="3dp"-->
+                <!--android:text="Password"-->
+                <!--android:textSize="17sp" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:paddingLeft="3dp"
-                android:fontFamily="@font/googlesans_medium"
-                android:text="Username"
-                android:textSize="17sp" />
+            <!--<EditText-->
+                <!--android:id="@+id/edt_password"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableRight="@drawable/ic_vpn_key_black_24dp"-->
+                <!--android:fontFamily="@font/googlesans_medium"-->
+                <!--android:hint="example123"-->
+                <!--android:inputType="textPassword" />-->
 
-            <EditText
-                android:id="@+id/edt_username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableRight="@drawable/ic_assignment_ind_black_24dp"
-                android:fontFamily="@font/googlesans_medium"
-                android:hint="example_32"
-                android:textSize="17sp" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="3dp"-->
+                <!--android:fontFamily="@font/googlesans_medium"-->
+                <!--android:gravity="right"-->
+                <!--android:text="Forgot your password ?" />-->
 
-            <TextView
-                android:fontFamily="@font/googlesans_medium"
+            <!--<Button-->
+                <!--android:id="@+id/btn_login"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:layout_marginLeft="50dp"-->
+                <!--android:layout_marginTop="40dp"-->
+                <!--android:layout_marginRight="50dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:background="@drawable/bg_button"-->
+                <!--android:fontFamily="@font/googlesans_bold"-->
+                <!--android:text="Login"-->
+                <!--android:textColor="@color/white" />-->
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingLeft="3dp"
-                android:text="Password"
-                android:textSize="17sp" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:fontFamily="@font/googlesans_medium"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Or Login using social Media" />-->
 
-            <EditText
-                android:id="@+id/edt_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableRight="@drawable/ic_vpn_key_black_24dp"
-                android:fontFamily="@font/googlesans_medium"
-                android:hint="example123"
-                android:inputType="textPassword" />
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal">-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="3dp"
-                android:fontFamily="@font/googlesans_medium"
-                android:gravity="right"
-                android:text="Forgot your password ?" />
+                <!--<ImageView-->
+                    <!--android:layout_width="25dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:src="@drawable/ic_search" />-->
 
-            <Button
-                android:id="@+id/btn_login"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/bg_button"
-                android:fontFamily="@font/googlesans_bold"
-                android:text="Login"
-                android:textColor="@color/white" />
+                <!--<ImageView-->
+                    <!--android:layout_width="25dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:src="@drawable/ic_facebook" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/googlesans_medium"
-                android:gravity="center"
-                android:text="Or Login using social Media" />
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+    <!--</android.support.v7.widget.CardView>-->
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_search" />
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal">-->
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/ic_facebook" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:fontFamily="@font/googlesans_medium"-->
+            <!--android:text="Don’t have an account ? " />-->
 
-            </LinearLayout>
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/googlesans_medium"
-            android:text="Don’t have an account ? " />
-
-        <TextView
-            android:id="@+id/btn_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/googlesans_medium"
-            android:text="Register Now"
-            android:textColor="@color/colorPrimaryDark" />
-    </LinearLayout>
+        <!--<TextView-->
+            <!--android:id="@+id/btn_register"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:fontFamily="@font/googlesans_medium"-->
+            <!--android:text="Register Now"-->
+            <!--android:textColor="@color/colorPrimaryDark" />-->
+    <!--</LinearLayout>-->
 </LinearLayout>

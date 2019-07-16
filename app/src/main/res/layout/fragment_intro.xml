@@ -32,19 +32,14 @@
 
 
     <Button
+        android:id="@+id/btn_lanjutkan"
         android:layout_marginTop="40dp"
         android:layout_width="150dp"
         android:background="@drawable/bg_button"
-        android:text="Sign in"
+        android:text="Lanjutkan"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:layout_height="wrap_content" />
 
 
-    <Button
-        android:id="@+id/btn_send"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log In"
-        android:textSize="15sp" />
 </LinearLayout>

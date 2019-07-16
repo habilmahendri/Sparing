@@ -13,14 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".feature.register.RegisterActivity">
+        </activity>
         <activity android:name=".feature.login.LoginActivity">
         </activity>
-        <activity android:name=".feature.SplashScreen"
-            android:theme="@style/AppTheme"/>
+
         <activity android:name=".feature.detail.DetailLobbyActivity"/>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"/>
+        <activity android:name=".feature.splashscreen_intro.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

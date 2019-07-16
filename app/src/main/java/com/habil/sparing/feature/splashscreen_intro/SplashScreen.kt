@@ -43,7 +43,6 @@ class SplashScreen : AppCompatActivity() {
             currentFragment = IntroFragment()
             preferencesHelper.setStartup(this, true)
 
-
         }
 
         supportFragmentManager

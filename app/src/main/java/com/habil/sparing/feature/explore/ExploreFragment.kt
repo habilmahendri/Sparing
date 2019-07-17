@@ -13,6 +13,7 @@ import com.habil.sparing.R
 import com.habil.sparing.adapter.ViewPagerAdapter
 import com.habil.sparing.feature.explore.tabs.event.EventFragment
 import com.habil.sparing.feature.explore.tabs.vanue.VanueFragment
+import kotlinx.android.synthetic.main.fragment_explore.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,6 +39,8 @@ class ExploreFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val vPager = view.findViewById<ViewPager>(R.id.viewpager_main)
         val tabs = view.findViewById<TabLayout>(R.id.tabs_main)
+        tabs?.setupWithViewPager(viewpager_main)
+
         setupViewPager(vPager)
     }
     private fun setupViewPager(viewPager: ViewPager?) {

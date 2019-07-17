@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="125dp"
+            android:layout_height="165dp">
+
+            <ImageView
+                android:id="@+id/img_vanue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_nameVanue"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/googlesans_bold"
+                android:textSize="17sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
+                android:text="Alibaba Futsal "
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_locationVanue"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/googlesans_bold"
+                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_location_on_black_24dp"
+                android:text="Rawalumbu Bekasi"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/googlesans_bold"
+                android:drawableLeft="@drawable/ic_menu"
+                android:textSize="14sp"
+                android:drawablePadding="6dp"
+                android:text="Futsal"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorLine"
+                android:layout_height="1dp"/>
+            <TextView
+                android:fontFamily="@font/googlesans_medium"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mulai Dari"/>
+
+            <TextView
+                android:id="@+id/tv_hargaVanue"
+                android:textColor="#FFA731"
+                android:fontFamily="@font/googlesans_bold"
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 90.000"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

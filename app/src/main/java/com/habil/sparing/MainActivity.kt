@@ -27,7 +27,7 @@ import com.habil.sparing.feature.splashscreen_intro.SplashScreen
 import com.habil.sparing.feature.splashscreen_intro.SplashScreenFragment
 
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     val home: Fragment = HomeFragment()
     val explore: Fragment = ExploreFragment()
     val lobby: Fragment = LobbyFragment()
@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        toolbar.title = "Home"
 
         setSupportActionBar(toolbar)
 
@@ -69,27 +70,36 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fm.beginTransaction().add(R.id.main_container, home, "1").commit()
 
     }
+
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
                 fm.beginTransaction().hide(active).show(home).commit()
                 active = home
+                toolbar.title = "Home"
+
                 return@OnNavigationItemSelectedListener true
             }
 
             R.id.navigation_explore -> {
                 fm.beginTransaction().hide(active).show(explore).commit()
                 active = explore
+                toolbar.title = "Explore"
+
                 return@OnNavigationItemSelectedListener true
             }
 
             R.id.navigation_lobby -> {
                 fm.beginTransaction().hide(active).show(lobby).commit()
                 active = lobby
+                toolbar.title = "Lobby"
+
                 return@OnNavigationItemSelectedListener true
-            }R.id.navigation_notifications -> {
+            }
+            R.id.navigation_notifications -> {
                 fm.beginTransaction().hide(active).show(notif).commit()
                 active = notif
+                toolbar.title = "Notification"
 
                 return@OnNavigationItemSelectedListener true
             }

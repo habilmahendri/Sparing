@@ -12,13 +12,16 @@ import com.habil.adoption.data.PreferencesHelper
 
 import com.habil.sparing.R
 import com.habil.sparing.adapter.EventAdapter
+import com.habil.sparing.adapter.VanueHomeAdapter
 import com.habil.sparing.feature.lobby.LobbyContract
 import com.habil.sparing.feature.login.LoginPresenter
 import com.habil.sparing.model.Event
+import com.habil.sparing.model.Vanue
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeFragment : Fragment(), HomeContract.View {
+
 
     private lateinit var preferencesHelper: PreferencesHelper
     lateinit var mPresenter: HomePresenter
@@ -37,6 +40,7 @@ class HomeFragment : Fragment(), HomeContract.View {
         preferencesHelper = PreferencesHelper()
         mPresenter = HomePresenter(this)
         mPresenter.getEvent()
+        mPresenter.getVanue()
 
         val fullName:String? = preferencesHelper.getFullName(context!!)
         tv_greeting.text =  HtmlCompat.fromHtml(
@@ -50,7 +54,11 @@ class HomeFragment : Fragment(), HomeContract.View {
         rv_event?.layoutManager = layoutManager
         rv_event?.adapter = EventAdapter(event,context)
     }
-
+    override fun showVanue(vanue: MutableList<Vanue>) {
+        val layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        rv_vanue?.layoutManager = layoutManager
+        rv_vanue?.adapter = VanueHomeAdapter(vanue,context)
+    }
 
 
 }

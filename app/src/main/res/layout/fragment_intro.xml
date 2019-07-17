@@ -35,7 +35,7 @@
         android:id="@+id/btn_lanjutkan"
         android:layout_marginTop="40dp"
         android:layout_width="150dp"
-        android:background="@drawable/bg_button"
+        android:background="@drawable/bg_button_blue"
         android:text="Lanjutkan"
         android:textAllCaps="false"
         android:textColor="@color/white"

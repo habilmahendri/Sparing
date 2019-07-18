@@ -44,4 +44,6 @@
     <string name="dummy_fullname">Raka Permana Putra</string>
     <string name="fullname">Fullname</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
 </resources>

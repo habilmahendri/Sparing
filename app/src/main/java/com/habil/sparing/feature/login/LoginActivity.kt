@@ -55,6 +55,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.View  {
         preferencesHelper.setFullName(this, dataSnapshot.child("full_name").value.toString())
         preferencesHelper.setEmailUser(this,dataSnapshot.child("email").value.toString())
         preferencesHelper.setNameUser(this,dataSnapshot.child("user_name").value.toString())
+        preferencesHelper.setTeamUser(this,dataSnapshot.child("team_name").value.toString())
         preferencesHelper.setLoggedIn(this, true)
 
         startActivity(applicationContext.intentFor<MainActivity>())

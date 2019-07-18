@@ -8,12 +8,12 @@ import android.util.Log
 import kotlinx.android.synthetic.main.activity_location_lobby.*
 import java.text.SimpleDateFormat
 import java.util.*
-import android.widget.TimePicker
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import com.habil.sparing.feature.post_lobby.post_lobby.PostLobbyActivity
 
 
 class LocationLobby : AppCompatActivity(), AdapterView.OnItemSelectedListener {

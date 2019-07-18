@@ -1,6 +1,7 @@
 package com.habil.sparing.feature.home
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.text.HtmlCompat
@@ -9,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.habil.adoption.data.PreferencesHelper
+import com.habil.sparing.MainActivity
 
 import com.habil.sparing.R
 import com.habil.sparing.adapter.EventAdapter
@@ -46,6 +48,10 @@ class HomeFragment : Fragment(), HomeContract.View {
         tv_greeting.text =  HtmlCompat.fromHtml(
             "Hello <b>$fullName<br>Mau main apa hari ini ?</b> ",
             HtmlCompat.FROM_HTML_MODE_LEGACY)
+
+        btn_lobby.setOnClickListener {
+            view.context.startActivity(Intent(context, MainActivity::class.java))
+        }
 
     }
 

@@ -235,7 +235,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_lobby"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="7dp"
@@ -244,8 +244,9 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/bg_button_blue"
             android:fontFamily="@font/googlesans_medium"
-            android:text="Buat Lobby Pertandingan"
+            android:text="@string/buat_lobby_pertandingan"
             android:textColor="@color/white" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_marginTop="17dp"

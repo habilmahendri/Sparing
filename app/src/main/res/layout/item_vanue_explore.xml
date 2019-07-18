@@ -2,6 +2,7 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="8dp"
     android:layout_height="wrap_content">
 
@@ -32,13 +33,15 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:id="@+id/tv_nameVanue"
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/googlesans_bold"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:layout_marginLeft="5dp"
                 android:textColor="@color/black"
-                android:text="Alibaba Futsal "
+                tools:text="Alibaba Futsal "
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -47,17 +50,17 @@
                 android:layout_marginBottom="5dp"
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/googlesans_bold"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:drawableStart="@drawable/ic_location_on_black_24dp"
-                android:text="Rawalumbu Bekasi"
+                tools:text="Rawalumbu Bekasi"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_marginStart="5dp"
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/googlesans_bold"
-                android:drawableLeft="@drawable/ic_menu"
-                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_menu"
+                android:textSize="12sp"
                 android:drawablePadding="6dp"
                 android:text="Futsal"
                 android:layout_height="wrap_content" />
@@ -81,7 +84,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp 90.000"/>
+                tools:text="Rp 90.000"/>
 
         </LinearLayout>
 

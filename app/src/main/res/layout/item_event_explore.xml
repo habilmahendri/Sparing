@@ -37,6 +37,7 @@
                 android:layout_width="110dp"
                 android:scaleType="centerCrop"
                 android:layout_height="match_parent" />
+
         </android.support.v7.widget.CardView>
 
         <LinearLayout
@@ -81,6 +82,7 @@
                 android:layout_height="wrap_content"
                 tools:text="12 Agustus 2019" />
         </LinearLayout>
+
     </RelativeLayout>
 
 </RelativeLayout>

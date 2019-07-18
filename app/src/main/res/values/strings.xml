@@ -33,4 +33,15 @@
     <string name="tempat">Tempat</string>
     <string name="tanggal_event">Tanggal Event</string>
     <string name="deskripsi">Deskripsi</string>
+    <string name="whatsapp_pemilik_lobby">Whatsapp Pemilik Lobby</string>
+    <string name="lihat_pertandingan">Lihat Pertandingan</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="dummy_phone_number">081808651808</string>
+    <string name="email">Email</string>
+    <string name="dummy_email">rakapermanaptr@gmail.com</string>
+    <string name="dummy_username">rakapermanaptr</string>
+    <string name="username">Username</string>
+    <string name="dummy_fullname">Raka Permana Putra</string>
+    <string name="fullname">Fullname</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>

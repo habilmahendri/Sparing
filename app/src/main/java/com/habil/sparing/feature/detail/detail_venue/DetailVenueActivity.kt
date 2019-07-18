@@ -28,8 +28,8 @@ class DetailVenueActivity : AppCompatActivity(), DetailVenueContract.View {
 
     override fun showDetail(vanue: Venue) {
         Glide.with(applicationContext)
-            .load(vanue.image)
-            .into(imgVenue)
+                .load(vanue.image)
+                .into(imgVenue)
 
         tvNamaVenue.text = vanue.nama
         tvLokasiVenue.text = vanue.location

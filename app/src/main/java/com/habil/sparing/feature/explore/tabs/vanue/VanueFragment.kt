@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.habil.sparing.R
 import com.habil.sparing.adapter.VanueExploreAdapter
-import com.habil.sparing.model.Vanue
+import com.habil.sparing.model.Venue
 import kotlinx.android.synthetic.main.fragment_vanue.*
 
 class VanueFragment : Fragment(), VanueContract.View {
@@ -31,7 +31,7 @@ class VanueFragment : Fragment(), VanueContract.View {
     }
 
 
-    override fun showVanue(vanue: MutableList<Vanue>) {
+    override fun showVanue(vanue: MutableList<Venue>) {
         val layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         rv_vanue?.layoutManager = layoutManager
         rv_vanue?.adapter = VanueExploreAdapter(vanue,context)

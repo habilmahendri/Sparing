@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".feature.detail.detail_venue.DetailVenueActivity">
+        </activity>
         <activity android:name=".feature.register.RegisterActivity">
         </activity>
         <activity android:name=".feature.login.LoginActivity">

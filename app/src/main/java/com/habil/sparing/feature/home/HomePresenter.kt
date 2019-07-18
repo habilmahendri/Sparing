@@ -2,14 +2,14 @@ package com.habil.sparing.feature.home
 
 import com.google.firebase.database.*
 import com.habil.sparing.model.Event
-import com.habil.sparing.model.Vanue
+import com.habil.sparing.model.Venue
 
 
 class HomePresenter(val mView: HomeContract.View) : HomeContract.Presenter {
 
     var reference: Query?= null
     var listEvent: MutableList<Event> = mutableListOf()
-    var listVanue: MutableList<Vanue> = mutableListOf()
+    var listVanue: MutableList<Venue> = mutableListOf()
 
     override fun getEvent() {
         reference = FirebaseDatabase.getInstance().reference.child("event").limitToFirst(4)
@@ -37,7 +37,7 @@ class HomePresenter(val mView: HomeContract.View) : HomeContract.Presenter {
                 listVanue.clear()
 
                 for (dataSnapshot1 in dataSnapshot.children) {
-                    val p = dataSnapshot1.getValue(Vanue::class.java)
+                    val p = dataSnapshot1.getValue(Venue::class.java)
                     listVanue.add(p!!)
 
                 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_marginLeft="10dp"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
@@ -50,14 +50,18 @@
             android:layout_height="120dp">
 
             <TextView
+                android:id="@+id/tvEventName"
                 android:textSize="14sp"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:fontFamily="@font/googlesans_bold"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Indonesia Mandiri Cup" />
+                tools:text="Indonesia Mandiri Cup" />
 
             <TextView
+                android:id="@+id/tvEventKategori"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
@@ -66,15 +70,16 @@
                 android:drawableLeft="@drawable/ic_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Futsal" />
+                tools:text="Futsal" />
 
             <TextView
+                android:id="@+id/tvEventDate"
                 android:drawablePadding="7dp"
                 android:fontFamily="@font/googlesans_medium"
                 android:drawableLeft="@drawable/ic_date_range_black_24dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12 Agustus 2019" />
+                tools:text="12 Agustus 2019" />
         </LinearLayout>
     </RelativeLayout>
 

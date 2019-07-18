@@ -1,11 +1,10 @@
 package com.habil.sparing.feature.explore.tabs.vanue
 
 import com.google.firebase.database.*
-import com.habil.sparing.feature.home.HomeContract
-import com.habil.sparing.model.Vanue
+import com.habil.sparing.model.Venue
 
 class VanuePresenter(val mView: VanueContract.View) : VanueContract.Presenter {
-    var listVanue: MutableList<Vanue> = mutableListOf()
+    var listVanue: MutableList<Venue> = mutableListOf()
     var reference: DatabaseReference?= null
 
     override fun getVanue() {
@@ -15,7 +14,7 @@ class VanuePresenter(val mView: VanueContract.View) : VanueContract.Presenter {
                 listVanue.clear()
 
                 for (dataSnapshot1 in dataSnapshot.children) {
-                    val p = dataSnapshot1.getValue(Vanue::class.java)
+                    val p = dataSnapshot1.getValue(Venue::class.java)
                     listVanue.add(p!!)
 
                 }

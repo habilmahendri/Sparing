@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".feature.post_lobby.PertandinganBaruActivity">
+        <activity android:name=".feature.post_lobby.PostLobbyActivity">
+        </activity>
+        <activity android:name=".feature.post_lobby.LocationLobby">
+        </activity>
+        <activity android:name=".feature.post_lobby.CreateLobbyActivity">
         </activity>
         <activity android:name=".feature.register.RegisterActivity">
         </activity>

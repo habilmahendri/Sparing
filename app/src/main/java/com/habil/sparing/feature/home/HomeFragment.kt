@@ -10,13 +10,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.habil.adoption.data.PreferencesHelper
-import com.habil.sparing.MainActivity
 
 import com.habil.sparing.R
 import com.habil.sparing.adapter.EventAdapter
 import com.habil.sparing.adapter.VanueHomeAdapter
-import com.habil.sparing.feature.lobby.LobbyContract
-import com.habil.sparing.feature.login.LoginPresenter
+import com.habil.sparing.feature.post_lobby.CreateLobbyActivity
 import com.habil.sparing.model.Event
 import com.habil.sparing.model.Vanue
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -50,7 +48,7 @@ class HomeFragment : Fragment(), HomeContract.View {
             HtmlCompat.FROM_HTML_MODE_LEGACY)
 
         btn_lobby.setOnClickListener {
-            view.context.startActivity(Intent(context, MainActivity::class.java))
+            view.context.startActivity(Intent(context, CreateLobbyActivity::class.java))
         }
 
     }

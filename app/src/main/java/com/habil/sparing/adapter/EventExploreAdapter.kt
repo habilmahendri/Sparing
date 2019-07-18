@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.habil.sparing.R
+import com.habil.sparing.feature.detail.detail_event.DetailEventActivity
 import com.habil.sparing.model.Event
 import kotlinx.android.synthetic.main.item_event_explore.view.*
+import org.jetbrains.anko.startActivity
 
 class EventExploreAdapter (val event: MutableList<Event>, val context: Context?) :
     RecyclerView.Adapter<EventExploreAdapter.ViewHolder>() {
@@ -32,6 +34,14 @@ class EventExploreAdapter (val event: MutableList<Event>, val context: Context?)
             Glide.with(itemView)
                 .load(event.image)
                 .into(itemView.img_event)
+
+            itemView.tvEventName.text = event.nama
+            itemView.tvEventKategori.text = event.kategori
+            itemView.tvEventDate.text = event.tanggal
+
+            itemView.setOnClickListener {
+                itemView.context.startActivity<DetailEventActivity>("id" to event.id_event)
+            }
         }
     }
 

@@ -29,4 +29,8 @@
     <string name="mulai_dari">Mulai dari</string>
     <string name="fasilitas">Fasilitas</string>
     <string name="dummy_text_deskripsi">Lapangan futsal ini berlokasi di Jalan Laskar Raya No.54, RT.001/RW.002, Pekayon Jaya, Bekasi Selatan, Pekayon Jaya, Bekasi Sel., Kota Bks, Jawa Barat 17148. Jika teman -teman ingin me-review lapangan futsal ini, silahkan gunakan formulir review dibawah. Dan jangan lupa tambahkan foto pendukung. Salam Futsal!</string>
+    <string name="kategori">Kategori</string>
+    <string name="tempat">Tempat</string>
+    <string name="tanggal_event">Tanggal Event</string>
+    <string name="deskripsi">Deskripsi</string>
 </resources>

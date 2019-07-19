@@ -26,8 +26,9 @@ import com.habil.sparing.feature.notification.NotificationFragment
 import kotlinx.android.synthetic.main.app_bar_main.*
 import android.widget.TextView
 import com.habil.adoption.data.PreferencesHelper
+import com.habil.sparing.feature.profile.ProfileActivity
 import com.habil.sparing.feature.splashscreen_intro.SplashScreen
-
+import org.jetbrains.anko.startActivity
 
 
 
@@ -147,7 +148,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_profile -> {
-                // Handle the camera action
+                startActivity<ProfileActivity>()
             }
             R.id.nav_pusatBantuan -> {
 

@@ -50,7 +50,7 @@ class HomeFragment : Fragment(), HomeContract.View {
             HtmlCompat.FROM_HTML_MODE_LEGACY)
 
         btn_lobby.setOnClickListener {
-            view.context.startActivity(Intent(context, Post::class.java))
+            view.context.startActivity(Intent(context, MainActivity::class.java))
         }
 
     }

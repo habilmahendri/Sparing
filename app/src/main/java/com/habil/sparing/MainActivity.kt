@@ -1,9 +1,12 @@
 package com.habil.sparing
 
 import android.app.Dialog
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.design.widget.NavigationView
@@ -24,7 +27,8 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 import android.widget.TextView
 import com.habil.adoption.data.PreferencesHelper
 import com.habil.sparing.feature.splashscreen_intro.SplashScreen
-import com.habil.sparing.feature.splashscreen_intro.SplashScreenFragment
+
+
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -42,10 +46,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         toolbar.title = "Home"
-
         setSupportActionBar(toolbar)
 
         preferencesHelper = PreferencesHelper()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+            val mChannel = NotificationChannel("MyNotification", "MyNotification", NotificationManager.IMPORTANCE_DEFAULT)
+
+
+            val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(mChannel)
+        }
 
 
         val toggle = ActionBarDrawerToggle(

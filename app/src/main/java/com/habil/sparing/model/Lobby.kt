@@ -12,6 +12,7 @@ data class Lobby(
     val durasi: String = "",
     val username: String? = "",
     val team_lawan: String = "",
-    val full_name: String? = ""
+    val full_name: String? = "",
+    val pembayaran: String? = ""
 
 )

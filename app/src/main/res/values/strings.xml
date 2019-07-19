@@ -49,4 +49,6 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="create_account">Create Account</string>
     <string name="full_name">Full Name</string>
+    <string name="success_message">Sampai jumpa diwaktu pertandingan. Persiapkan Tim kamu sebaik mungkin. Selamat bertanding!</string>
+    <string name="silakan_masukan_nama_tim_lawan">Silakan masukan nama tim lawan</string>
 </resources>

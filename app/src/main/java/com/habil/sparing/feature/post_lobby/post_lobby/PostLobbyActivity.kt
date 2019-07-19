@@ -39,6 +39,7 @@ class PostLobbyActivity : AppCompatActivity(), PostLobbyContract.View {
         val tanggal: String = intent.getStringExtra("TANGGAL")
         val waktu: String = intent.getStringExtra("WAKTU")
         val durasi: String = intent.getStringExtra("DURASI")
+        val pembayaran: String = intent.getStringExtra("PEMBAYARAN")
         val username = preferencesHelper.getNameUser(this)
         val full_name = preferencesHelper.getFullName(this)
         val team_name = preferencesHelper.getTeamUser(this)
@@ -50,6 +51,7 @@ class PostLobbyActivity : AppCompatActivity(), PostLobbyContract.View {
         tv_lokasi.text = venue
         tv_time.text = waktu
         tv_catatan.text = catatan
+        tv_pembayaran.text = pembayaran
 
 
         val lobby = Lobby(
@@ -63,7 +65,8 @@ class PostLobbyActivity : AppCompatActivity(), PostLobbyContract.View {
             kategori = kategori,
             durasi = durasi,
             username = username,
-            full_name = full_name
+            full_name = full_name,
+            pembayaran = pembayaran
         )
 
         btn_post.setOnClickListener {

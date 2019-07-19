@@ -12,22 +12,18 @@ class PostLobbyPresenter(val mView: PostLobbyContract.View): PostLobbyContract.P
         reference = FirebaseDatabase.getInstance().reference.child("lobby").child(lobby.id_lobby)
         reference!!.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-
-
                 dataSnapshot.ref.setValue(lobby)
                 mView.userPost()
                 mView.message("Anda berhasil membuat lobby baru")
-//                if (dataSnapshot.exists()) {
-//                    mView.message("username tidak tersedia")
-//                } else {
-//
-//                }
+
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
 
             }
-        }) }
+        })
+
+    }
 
 
 

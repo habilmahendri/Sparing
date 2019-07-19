@@ -19,7 +19,7 @@
             android:id="@+id/img"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:src="@drawable/ic_referee_" />
+            android:src="@drawable/ic_undraw_game_day_ucx9" />
 
         <TextView
             android:id="@+id/tv_tittle"
@@ -29,7 +29,7 @@
             android:fontFamily="@font/googlesans_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kamu ingin keluar ?" />
+            android:text="Ternyata kamu berani juga ya" />
 
         <TextView
             android:id="@+id/tv_deks"
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/logout_desc" />
+            android:text="@string/success_message" />
 
         <LinearLayout
             android:layout_marginTop="15dp"
@@ -49,21 +49,10 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:background="@drawable/bg_button_blue"
-                android:layout_weight="1"
-                android:id="@+id/btn_logout"
-                android:textColor="@color/white"
-                android:text="Logout"
-                android:textAllCaps="false"
-                android:fontFamily="@font/googlesans_medium"
-                android:layout_width="match_parent"
-                android:layout_marginEnd="4dp"
-                android:layout_height="wrap_content" />
 
-            <Button
                 android:layout_weight="1"
-                android:text="Kembali"
-                android:id="@+id/btn_kembali"
+                android:text="Siap Kapten"
+                android:id="@+id/btn_success"
                 android:layout_marginStart="4dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/googlesans_medium"

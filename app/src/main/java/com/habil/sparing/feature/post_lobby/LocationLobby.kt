@@ -94,6 +94,7 @@ class LocationLobby : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             mBundle.putString("TANGGAL",tv_date.text.toString())
             mBundle.putString("WAKTU",tv_time.text.toString())
             mBundle.putString("DURASI",duration)
+            mBundle.putString("PEMBAYARAN",id_pembayaran.text.toString())
 
             val intent = Intent(this, PostLobbyActivity::class.java)
             intent.putExtras(mBundle)

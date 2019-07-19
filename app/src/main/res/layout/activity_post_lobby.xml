@@ -125,6 +125,41 @@
                         />
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_hand_shake" />
+
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:fontFamily="@font/googlesans_bold"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Metode Pembayaran"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_pembayaran"
+                        android:fontFamily="@font/googlesans_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Lapangan Alibaba"
+                        />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
 

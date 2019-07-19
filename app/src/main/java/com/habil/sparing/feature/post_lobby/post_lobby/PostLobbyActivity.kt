@@ -32,20 +32,16 @@ class PostLobbyActivity : AppCompatActivity(), PostLobbyContract.View {
         supportActionBar!!.setDisplayShowHomeEnabled(true)
 
 
-        val extras = intent.extras
-        val judul: String = extras.getString("JUDUL")
-        val kategori: String = extras.getString("KATEGORI")
-        val catatan: String = extras.getString("CATATAN")
-        val venue: String = extras.getString("VANUE")
-        val tanggal: String = extras.getString("TANGGAL")
-        val waktu: String = extras.getString("WAKTU")
-        val durasi: String = extras.getString("DURASI")
+        val judul: String = intent.getStringExtra("JUDUL")
+        val kategori: String = intent.getStringExtra("KATEGORI")
+        val catatan: String = intent.getStringExtra("CATATAN")
+        val venue: String = intent.getStringExtra("VANUE")
+        val tanggal: String = intent.getStringExtra("TANGGAL")
+        val waktu: String = intent.getStringExtra("WAKTU")
+        val durasi: String = intent.getStringExtra("DURASI")
         val username = preferencesHelper.getNameUser(this)
         val full_name = preferencesHelper.getFullName(this)
         val team_name = preferencesHelper.getTeamUser(this)
-
-
-
 
 
         tv_date.text = tanggal
@@ -81,6 +77,7 @@ class PostLobbyActivity : AppCompatActivity(), PostLobbyContract.View {
         toast(message)
 
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

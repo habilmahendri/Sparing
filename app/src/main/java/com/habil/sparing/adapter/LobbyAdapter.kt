@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.habil.sparing.R
-import com.habil.sparing.feature.detail.DetailLobbyActivity
+import com.habil.sparing.feature.detail.detail_lobby.DetailLobbyActivity
 import com.habil.sparing.model.Lobby
 import kotlinx.android.synthetic.main.item_lobby.view.*
 import org.jetbrains.anko.startActivity
@@ -46,7 +46,8 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         itemView.tvTeamLawan.text = lobby.team_lawan
 
         itemView.btnMasukRuangLobby.setOnClickListener {
-            itemView.context.startActivity<DetailLobbyActivity>()
+            itemView.context.startActivity<DetailLobbyActivity>("id" to lobby.id_lobby)
+
         }
 
     }

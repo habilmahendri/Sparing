@@ -1,18 +1,16 @@
 package com.habil.sparing.adapter
 
 import android.content.Context
-import android.support.v4.text.HtmlCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.habil.sparing.R
-import com.habil.sparing.model.Event
-import com.habil.sparing.model.Vanue
+import com.habil.sparing.model.Venue
 import kotlinx.android.synthetic.main.item_venue.view.*
 
-class VanueHomeAdapter(val event: MutableList<Vanue>, val context: Context?) :
+class VanueHomeAdapter(val event: MutableList<Venue>, val context: Context?) :
     RecyclerView.Adapter<VanueHomeAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VanueHomeAdapter.ViewHolder =
@@ -29,7 +27,7 @@ class VanueHomeAdapter(val event: MutableList<Vanue>, val context: Context?) :
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(vanue: Vanue) {
+        fun bind(vanue: Venue) {
 
             Glide.with(itemView)
                 .load(vanue.image)

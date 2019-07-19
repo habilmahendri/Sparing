@@ -7,6 +7,7 @@ import com.habil.adoption.data.PreferencesUtility.EMAIL
 import com.habil.adoption.data.PreferencesUtility.FULL_NAME
 import com.habil.adoption.data.PreferencesUtility.LOGIN
 import com.habil.adoption.data.PreferencesUtility.STARTUP
+import com.habil.adoption.data.PreferencesUtility.TEAM
 import com.habil.adoption.data.PreferencesUtility.URL_PHOTO
 import com.habil.adoption.data.PreferencesUtility.USER_NAME
 
@@ -88,6 +89,19 @@ class PreferencesHelper {
 
     fun getNameUser(context: Context): String? {
         return getPreferences(context).getString(USER_NAME, "")
+    }
+
+
+    //save name user
+    fun setTeamUser(context: Context, team: String) {
+        val editor = getPreferences(context).edit()
+        editor.putString(TEAM, team)
+        editor.apply()
+
+    }
+
+    fun getTeamUser(context: Context): String? {
+        return getPreferences(context).getString(TEAM, "")
     }
 
 

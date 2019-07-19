@@ -10,6 +10,7 @@ object PreferencesUtility {
     val FULL_NAME = "full_name"
     val EMAIL = "email"
     val URL_PHOTO = "url_photo"
+    val TEAM = "team"
 
 
 

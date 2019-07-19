@@ -32,6 +32,8 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:fontFamily="@font/googlesans_bold"
+                    android:textColor="@color/black"
                     android:id="@+id/tvUsername"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -43,6 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/kota_bekasi"
+                    android:fontFamily="@font/googlesans_medium"
                     android:textAllCaps="true"
                     android:textSize="12sp" />
 
@@ -66,6 +69,8 @@
             android:orientation="vertical">
 
             <TextView
+                android:fontFamily="@font/googlesans_bold"
+                android:textColor="@color/black"
                 android:id="@+id/tvJudul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -79,6 +84,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:fontFamily="@font/googlesans_regular"
                     android:id="@+id/tvTanggal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -88,6 +94,7 @@
                     tools:text="19 Agustus 2019" />
 
                 <TextView
+                    android:fontFamily="@font/googlesans_regular"
                     android:id="@+id/tvWaktu"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -105,6 +112,8 @@
                 android:background="@color/colorLine" />
 
             <TextView
+                android:textColor="@color/black"
+                android:fontFamily="@font/googlesans_medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -118,6 +127,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:fontFamily="@font/googlesans_medium"
                     android:id="@+id/tvTeam"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -127,6 +137,7 @@
                     tools:text="3KA29" />
 
                 <TextView
+                    android:fontFamily="@font/googlesans_medium"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
@@ -135,6 +146,7 @@
                     android:textSize="10sp" />
 
                 <TextView
+                    android:fontFamily="@font/googlesans_medium"
                     android:id="@+id/tvTeamLawan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

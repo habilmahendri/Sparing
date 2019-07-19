@@ -38,18 +38,16 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/googlesans_bold"
                     android:gravity="center"
-                    android:text="Create Account"
+                    android:text="@string/create_account"
                     android:textColor="@color/black"
                     android:textSize="23sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:fontFamily="@font/googlesans_medium"
-
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:paddingLeft="3dp"
-                    android:text="Full Name"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:text="@string/full_name"
                     android:textSize="17sp" />
 
                 <EditText
@@ -59,13 +57,14 @@
                     android:drawableRight="@drawable/ic_assignment_ind_black_24dp"
                     android:fontFamily="@font/googlesans_medium"
                     android:hint="example example"
-                    />
-                <TextView
-                    android:fontFamily="@font/googlesans_medium"
+                    android:inputType="text"
+                    android:maxLines="1" />
 
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/googlesans_medium"
                     android:paddingLeft="3dp"
                     android:text="User Name"
                     android:textSize="17sp" />
@@ -77,14 +76,14 @@
                     android:drawableRight="@drawable/ic_assignment_ind_black_24dp"
                     android:fontFamily="@font/googlesans_medium"
                     android:hint="example_123"
-                    />
+                    android:inputType="text"
+                    android:maxLines="1" />
 
                 <TextView
-                    android:fontFamily="@font/googlesans_medium"
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/googlesans_medium"
                     android:paddingLeft="3dp"
                     android:text="Email"
                     android:textSize="17sp" />
@@ -96,13 +95,15 @@
                     android:drawableRight="@drawable/ic_email_black_24dp"
                     android:fontFamily="@font/googlesans_medium"
                     android:hint="example@gmail.com"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
                     android:textSize="17sp" />
 
                 <TextView
-                    android:fontFamily="@font/googlesans_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/googlesans_medium"
                     android:paddingLeft="3dp"
                     android:text="Phone Number"
                     android:textSize="17sp" />
@@ -114,12 +115,16 @@
                     android:drawableRight="@drawable/ic_phone_android_black_24dp"
                     android:fontFamily="@font/googlesans_medium"
                     android:hint="08121291***"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:maxLines="1"
                     android:textSize="17sp" />
+
                 <TextView
-                    android:fontFamily="@font/googlesans_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/googlesans_medium"
                     android:paddingLeft="3dp"
                     android:text="Team Name"
                     android:textSize="17sp" />
@@ -131,14 +136,16 @@
                     android:drawableRight="@drawable/ic_security_black_24dp"
                     android:fontFamily="@font/googlesans_medium"
                     android:hint="GundarFc"
+                    android:inputType="text"
+                    android:maxLines="1"
                     android:textSize="17sp" />
 
 
                 <TextView
-                    android:fontFamily="@font/googlesans_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/googlesans_medium"
                     android:paddingLeft="3dp"
                     android:text="Password"
                     android:textSize="17sp" />
@@ -150,13 +157,14 @@
                     android:drawableRight="@drawable/ic_vpn_key_black_24dp"
                     android:fontFamily="@font/googlesans_medium"
                     android:hint="example123"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
 
                 <CheckBox
                     android:id="@+id/cb_term"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    />
+                    android:layout_marginTop="8dp" />
 
                 <Button
                     android:id="@+id/btn_register"
@@ -178,9 +186,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView

@@ -13,12 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".feature.post_lobby.PertandinganBaruActivity">
+        <activity android:name=".feature.post_lobby.post_lobby.PostLobbyActivity">
+        </activity>
+        <activity android:name=".feature.post_lobby.LocationLobby">
+        </activity>
+        <activity
+            android:name=".feature.post_lobby.CreateLobbyActivity"
+            android:windowSoftInputMode="adjustResize">
+
         </activity>
         <activity android:name=".feature.register.RegisterActivity">
         </activity>
         <activity android:name=".feature.login.LoginActivity">
         </activity>
+        <activity android:name=".feature.profile.ProfileActivity"/>
+        <activity android:name=".feature.detail.detail_event.DetailEventActivity"/>
+        <activity android:name=".feature.detail.detail_venue.DetailVenueActivity"/>
         <activity android:name=".feature.detail.DetailLobbyActivity" />
         <activity
             android:name=".MainActivity"
@@ -30,6 +40,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".service.MyMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

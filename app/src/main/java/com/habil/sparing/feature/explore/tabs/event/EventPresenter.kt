@@ -2,7 +2,6 @@ package com.habil.sparing.feature.explore.tabs.event
 
 import com.google.firebase.database.*
 import com.habil.sparing.model.Event
-import com.habil.sparing.model.Vanue
 
 class EventPresenter (val mView: EventContract.View) : EventContract.Presenter {
     var listVanue: MutableList<Event> = mutableListOf()

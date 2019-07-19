@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
     tools:context=".feature.login.LoginActivity">
-
-
-    <LinearLayout
-        android:background="@color/colorPrimaryDark"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="match_parent"
@@ -49,8 +44,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:paddingLeft="3dp"
                     android:fontFamily="@font/googlesans_medium"
+                    android:paddingLeft="3dp"
                     android:text="Username"
                     android:textSize="17sp" />
 
@@ -61,14 +56,16 @@
                     android:drawableRight="@drawable/ic_assignment_ind_black_24dp"
                     android:fontFamily="@font/googlesans_medium"
                     android:hint="example_32"
+                    android:inputType="text"
+                    android:maxLines="1"
                     android:textSize="17sp" />
 
                 <TextView
-                    android:fontFamily="@font/googlesans_medium"
-
                     android:layout_width="wrap_content"
+
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/googlesans_medium"
                     android:paddingLeft="3dp"
                     android:text="Password"
                     android:textSize="17sp" />
@@ -80,7 +77,8 @@
                     android:drawableRight="@drawable/ic_vpn_key_black_24dp"
                     android:fontFamily="@font/googlesans_medium"
                     android:hint="example123"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:maxLines="1"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -88,6 +86,7 @@
                     android:layout_marginRight="3dp"
                     android:fontFamily="@font/googlesans_medium"
                     android:gravity="right"
+                    android:layout_marginTop="8dp"
                     android:text="Forgot your password ?" />
 
                 <Button
@@ -108,6 +107,7 @@
         </android.support.v7.widget.CardView>
 
         <LinearLayout
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -127,5 +127,5 @@
                 android:text="Register Now"
                 android:textColor="@color/bluePrimary" />
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+
+</LinearLayout>

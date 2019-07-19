@@ -7,11 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.habil.sparing.R
-import com.habil.sparing.model.Vanue
+import com.habil.sparing.feature.detail.detail_venue.DetailVenueActivity
+import com.habil.sparing.model.Venue
 import kotlinx.android.synthetic.main.item_vanue_explore.view.*
-import kotlinx.android.synthetic.main.item_venue.view.*
+import org.jetbrains.anko.startActivity
 
-class VanueExploreAdapter (val event: MutableList<Vanue>, val context: Context?) :
+class VanueExploreAdapter (val event: MutableList<Venue>, val context: Context?) :
     RecyclerView.Adapter<VanueExploreAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VanueExploreAdapter.ViewHolder =
@@ -28,7 +29,7 @@ class VanueExploreAdapter (val event: MutableList<Vanue>, val context: Context?)
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(vanue: Vanue) {
+        fun bind(vanue: Venue) {
 
             Glide.with(itemView)
                 .load(vanue.image)
@@ -36,7 +37,10 @@ class VanueExploreAdapter (val event: MutableList<Vanue>, val context: Context?)
             itemView.tv_nameVanue.text = vanue.nama
             itemView.tv_locationVanue.text = vanue.location
             itemView.tv_hargaVanue.text = vanue.harga
-//            itemView.tv_harga.text = "Mulai dari ${vanue.harga}"
+
+            itemView.setOnClickListener {
+                itemView.context.startActivity<DetailVenueActivity>("id" to vanue.id_vanue)
+            }
 
         }
     }

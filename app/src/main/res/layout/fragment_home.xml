@@ -183,7 +183,7 @@
         </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:id="@+id/rv_event"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -261,7 +261,7 @@
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/info_amp_event" />
+                android:text="Vanue" />
 
             <TextView
                 android:layout_marginStart="10dp"
@@ -277,7 +277,7 @@
         </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:id="@+id/rv_vanue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

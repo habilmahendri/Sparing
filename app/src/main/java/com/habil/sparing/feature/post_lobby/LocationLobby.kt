@@ -53,8 +53,6 @@ class LocationLobby : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         // Set Adapter to Spinner
         spinner!!.adapter = arrayAdapter
 
-
-
         open_calendar.setOnClickListener {
             val datePickerDialog = DatePickerDialog(
                 this@LocationLobby,

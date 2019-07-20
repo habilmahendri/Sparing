@@ -98,7 +98,7 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
                 btn_kembali.text = "kembali"
 
                 btn_logout.setOnClickListener {
-                    mPresenter.sendNotif(username!!,notif)
+                    mPresenter.sendNotif(lobby.username!!,notif)
                     dialog.hide()
                     dialog.setContentView(R.layout.item_dialog_success)
                     val btn_success = dialog.findViewById(R.id.btn_success) as Button

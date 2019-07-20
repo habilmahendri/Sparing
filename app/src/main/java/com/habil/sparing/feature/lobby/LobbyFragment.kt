@@ -36,6 +36,7 @@ class LobbyFragment : Fragment(), LobbyContract.View {
     }
 
     override fun showAllLobby(lobby: MutableList<Lobby>) {
+        lobby.reverse()
         listLobby.clear()
         listLobby.addAll(lobby)
         val linearLayoutManager = LinearLayoutManager(activity, LinearLayout.VERTICAL, false)

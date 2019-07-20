@@ -80,8 +80,6 @@ class LocationLobby : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                     tv_time.text = "$selectedHour:$selectedMinute"
                 }, hour, minute, true
             )//Yes 24 hour time
-
-            mTimePicker.setTitle("Select Time")
             mTimePicker.show()
         }
 

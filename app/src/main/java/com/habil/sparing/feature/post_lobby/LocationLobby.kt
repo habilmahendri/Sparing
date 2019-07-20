@@ -19,12 +19,14 @@ import com.habil.sparing.feature.post_lobby.post_lobby.PostLobbyActivity
 class LocationLobby : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     var list_of_duration = arrayOf("1 Jam", "2 Jam", "3 Jam")
-    var duration:String = ""
+    var duration: String = ""
     var calendar = Calendar.getInstance()
     var year = calendar.get(Calendar.YEAR)
     var month = calendar.get(Calendar.MONTH)
     var dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
     private var dateFormatter: SimpleDateFormat? = null
+    val cal = Calendar.getInstance()
+    val calEnd = Calendar.getInstance()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,7 +59,7 @@ class LocationLobby : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             val datePickerDialog = DatePickerDialog(
                 this@LocationLobby,
                 DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
-                   // tv_date.text = "$day + $month + $year"
+                    // tv_date.text = "$day + $month + $year"
                     val newDate = Calendar.getInstance()
                     newDate.set(year, month, day)
                     tv_date.text = dateFormatter!!.format(newDate.time)
@@ -67,30 +69,51 @@ class LocationLobby : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         }
 
         openTime.setOnClickListener {
-            // TODO Auto-generated method stub
-            val mcurrentTime = Calendar.getInstance()
-            val hour = mcurrentTime.get(Calendar.HOUR_OF_DAY)
-            val minute = mcurrentTime.get(Calendar.MINUTE)
-            val mTimePicker: TimePickerDialog
+            val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
+                cal.set(Calendar.HOUR_OF_DAY, hour)
+                cal.set(Calendar.MINUTE, minute)
 
-            mTimePicker = TimePickerDialog(this@LocationLobby,
-                TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
-                    tv_time.text = "$selectedHour:$selectedMinute"
-                }, hour, minute, true
-            )//Yes 24 hour time
-            mTimePicker.show()
+                tv_time.text = SimpleDateFormat("HH:mm").format(cal.time)
+            }
+            TimePickerDialog(
+                this,
+                timeSetListener,
+                cal.get(Calendar.HOUR_OF_DAY),
+                cal.get(Calendar.MINUTE),
+                true
+            ).show()
         }
 
         btn_lanjutkan.setOnClickListener {
+            calEnd.time = cal.time
+
+            when (duration) {
+                "1 Jam" -> {
+                    calEnd.add(Calendar.HOUR, 1)
+                    Log.e("increment 1 hour", SimpleDateFormat("HH:mm").format(calEnd.time))
+                }
+                "2 Jam" -> {
+                    calEnd.add(Calendar.HOUR, 2)
+                    Log.e("increment 2 hour", SimpleDateFormat("HH:mm").format(calEnd.time))
+                }
+                "3 Jam" -> {
+                    calEnd.add(Calendar.HOUR, 3)
+                    Log.e("increment 3 hour", SimpleDateFormat("HH:mm").format(calEnd.time))
+                }
+            }
+
+            val endTime: String = SimpleDateFormat("HH:mm").format(calEnd.time)
+
             val mBundle = Bundle()
-            mBundle.putString("JUDUL",extras.getString("JUDUL"))
-            mBundle.putString("KATEGORI",extras.getString("KATEGORI"))
-            mBundle.putString("CATATAN",extras.getString("CATATAN"))
-            mBundle.putString("VANUE",id_vanue.text.toString())
-            mBundle.putString("TANGGAL",tv_date.text.toString())
-            mBundle.putString("WAKTU",tv_time.text.toString())
-            mBundle.putString("DURASI",duration)
-            mBundle.putString("PEMBAYARAN",id_pembayaran.text.toString())
+            mBundle.putString("JUDUL", extras.getString("JUDUL"))
+            mBundle.putString("KATEGORI", extras.getString("KATEGORI"))
+            mBundle.putString("CATATAN", extras.getString("CATATAN"))
+            mBundle.putString("VANUE", id_vanue.text.toString())
+            mBundle.putString("TANGGAL", tv_date.text.toString())
+            mBundle.putString("WAKTU", tv_time.text.toString())
+            mBundle.putString("SELESAI", endTime)
+            mBundle.putString("DURASI", duration)
+            mBundle.putString("PEMBAYARAN", id_pembayaran.text.toString())
 
             val intent = Intent(this, PostLobbyActivity::class.java)
             intent.putExtras(mBundle)
@@ -99,6 +122,7 @@ class LocationLobby : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
 
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
@@ -110,6 +134,7 @@ class LocationLobby : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
         duration = list_of_duration[p2]
+
 
     }
 }

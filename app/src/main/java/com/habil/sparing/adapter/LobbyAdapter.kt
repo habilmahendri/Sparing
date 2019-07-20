@@ -41,7 +41,7 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         itemView.tvJudul.text = lobby.judul
         itemView.tvTanggal.text = lobby.tanggal
-        itemView.tvWaktu.text = lobby.waktu
+        itemView.tvWaktu.text = "${lobby.waktu} - ${lobby.selesai} "
         itemView.tvTeam.text = lobby.team_name
         itemView.tvTeamLawan.text = lobby.team_lawan
 

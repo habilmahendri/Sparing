@@ -57,7 +57,7 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
 
         tv_judul.text = lobby.judul
         tv_lokasi.text = lobby.venue
-        tv_time.text = lobby.waktu
+        tv_time.text = "${lobby.waktu} - ${lobby.selesai}"
         tv_catatan.text = lobby.catatan
         tv_pembayaran.text = lobby.pembayaran
         Log.e("lobby detail", lobby.catatan)

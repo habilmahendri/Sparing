@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.item_lobby.view.*
 import org.jetbrains.anko.startActivity
 
 class LobbyAdapter(private val context: Context, private val lobby: List<Lobby>) :
-    RecyclerView.Adapter<ViewHolder>() {
+        RecyclerView.Adapter<LobbyAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_lobby, parent, false))
@@ -23,31 +23,29 @@ class LobbyAdapter(private val context: Context, private val lobby: List<Lobby>)
 
     override fun getItemCount(): Int = lobby.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(lobby[position])
-    }
-}
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bindItem(lobby[position])
 
-class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    private val imgKategori = view.findViewById<ImageView>(R.id.imgKategori)
-    private val btnMasukRuangLobby = view.findViewById<Button>(R.id.btnMasukRuangLobby)
+        private val imgKategori = view.findViewById<ImageView>(R.id.imgKategori)
+        private val btnMasukRuangLobby = view.findViewById<Button>(R.id.btnMasukRuangLobby)
 
-    fun bindItem(lobby: Lobby) {
-        Glide.with(itemView)
-            .load(lobby.kategori)
-            .into(imgKategori)
-        itemView.tvUsername.text = lobby.username
+        fun bindItem(lobby: Lobby) {
+            Glide.with(itemView)
+                    .load(lobby.kategori)
+                    .into(imgKategori)
+            itemView.tvUsername.text = lobby.username
 
-        itemView.tvJudul.text = lobby.judul
-        itemView.tvTanggal.text = lobby.tanggal
-        itemView.tvWaktu.text = lobby.waktu
-        itemView.tvTeam.text = lobby.team_name
-        itemView.tvTeamLawan.text = lobby.team_lawan
+            itemView.tvJudul.text = lobby.judul
+            itemView.tvTanggal.text = lobby.tanggal
+            itemView.tvWaktu.text = lobby.waktu
+            itemView.tvTeam.text = lobby.team_name
+            itemView.tvTeamLawan.text = lobby.team_lawan
 
-        itemView.btnMasukRuangLobby.setOnClickListener {
-            itemView.context.startActivity<DetailLobbyActivity>()
+            itemView.btnMasukRuangLobby.setOnClickListener {
+                itemView.context.startActivity<DetailLobbyActivity>()
+            }
+
         }
-
     }
 }

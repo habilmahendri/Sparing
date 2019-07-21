@@ -7,6 +7,7 @@ data class Notif(
         val id_lobby: String = "",
         val username: String? = "",
         val kategori: String? = "",
-        val tanggal: String = ""
+        val tanggal: String = "",
+        val username_lawan: String? = ""
 
 )

@@ -4,8 +4,7 @@ import com.google.firebase.database.*
 import com.habil.sparing.model.Lobby
 import com.habil.sparing.model.Notif
 
-class DetailLobbyPresenter(val mView: DetailLobbyContract.View) : DetailLobbyContract.Presenter  {
-
+class DetailLobbyPresenter(val mView: DetailLobbyContract.View) : DetailLobbyContract.Presenter {
 
 
     private var reference: DatabaseReference? = null
@@ -22,9 +21,10 @@ class DetailLobbyPresenter(val mView: DetailLobbyContract.View) : DetailLobbyCon
             override fun onCancelled(databaseError: DatabaseError) {
 
             }
-        })}
+        })
+    }
 
-    override fun sendNotif(id_notif:String,notif: Notif) {
+        override fun sendNotif(id_notif:String,notif: Notif) {
         reference = FirebaseDatabase.getInstance().reference.child("notif").child(id_notif).child(notif.id_notif!!)
         reference!!.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -37,7 +37,22 @@ class DetailLobbyPresenter(val mView: DetailLobbyContract.View) : DetailLobbyCon
             }
         })
     }
-    override fun sendLawan(team_lawan: String,id_lobby: String) {
+
+//    override fun sendNotif(username: Notif, id_notif: String) {
+//        reference = FirebaseDatabase.getInstance().reference.child("notif").child(username.username!!).child(id_notif)
+//        reference!!.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(dataSnapshot: DataSnapshot) {
+//                dataSnapshot.ref.setValue(username)
+//                mView.showNotif()
+//            }
+//
+//            override fun onCancelled(databaseError: DatabaseError) {
+//
+//            }
+//        })
+//    }
+
+    override fun sendLawan(team_lawan: String, id_lobby: String) {
         reference = FirebaseDatabase.getInstance().reference.child("lobby").child(id_lobby)
         reference!!.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {

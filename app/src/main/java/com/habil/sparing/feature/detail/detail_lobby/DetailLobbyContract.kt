@@ -5,7 +5,7 @@ import com.habil.sparing.model.Notif
 
 interface DetailLobbyContract {
     interface View {
-        fun showDetail(lobby:Lobby)
+        fun showDetail(lobby: Lobby)
         fun showNotif()
         fun showLawan()
 
@@ -13,7 +13,8 @@ interface DetailLobbyContract {
 
     interface Presenter {
         fun getDetailLobby(id_lobby: String)
-        fun sendNotif(id_notif:String,notif:Notif)
-        fun sendLawan(team_lawan:String,id_lobby: String)
+        fun sendNotif(id_notif: String, notif: Notif)
+        //        fun sendNotif(username: Notif, id_notif: String)
+        fun sendLawan(team_lawan: String, id_lobby: String)
     }
 }

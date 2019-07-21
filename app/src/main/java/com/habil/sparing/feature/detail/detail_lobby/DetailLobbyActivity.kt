@@ -17,6 +17,7 @@ import com.habil.sparing.R
 import com.habil.sparing.model.Lobby
 import com.habil.sparing.model.Notif
 import kotlinx.android.synthetic.main.activity_detail_lobby.*
+import org.jetbrains.anko.toast
 
 class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
 
@@ -68,7 +69,8 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
                 id_lobby = lobby.id_lobby,
                 username = lobby.username,
                 tanggal = lobby.tanggal,
-                kategori = lobby.kategori
+                kategori = lobby.kategori,
+                username_lawan =  username
         )
 
 
@@ -99,6 +101,7 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
 
                 btn_logout.setOnClickListener {
                     mPresenter.sendNotif(lobby.username!!,notif)
+//                    mPresenter.sendNotif(notif, notif.id_notif!!)
                     dialog.hide()
                     dialog.setContentView(R.layout.item_dialog_success)
                     val btn_success = dialog.findViewById(R.id.btn_success) as Button
@@ -125,7 +128,7 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
         }
     }
     override fun showNotif() {
-
+        this.toast("Minta bergabung")
     }
 
     override fun showLawan() {

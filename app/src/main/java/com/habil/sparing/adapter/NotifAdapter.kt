@@ -11,20 +11,21 @@ import com.bumptech.glide.Glide
 import com.habil.sparing.R
 import com.habil.sparing.feature.detail.detail_lobby.DetailLobbyActivity
 import com.habil.sparing.model.Lobby
+import com.habil.sparing.model.Notif
 import kotlinx.android.synthetic.main.item_lobby.view.*
 import org.jetbrains.anko.startActivity
 
-class LobbyAdapter(private val context: Context, private val lobby: List<Lobby>) :
-    RecyclerView.Adapter<LobbyAdapter.ViewHolder>() {
+class NotifAdapter(private val context: Context, private val notif: List<Notif>) :
+    RecyclerView.Adapter<NotifAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_lobby, parent, false))
     }
 
-    override fun getItemCount(): Int = lobby.size
+    override fun getItemCount(): Int = notif.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(lobby[position])
+        holder.bindItem(notif[position])
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -32,7 +33,7 @@ class LobbyAdapter(private val context: Context, private val lobby: List<Lobby>)
         private val imgKategori = view.findViewById<ImageView>(R.id.imgKategori)
         private val btnMasukRuangLobby = view.findViewById<Button>(R.id.btnMasukRuangLobby)
 
-        fun bindItem(lobby: Lobby) {
+        fun bindItem(notif: Notif) {
             Glide.with(itemView)
                 .load(lobby.kategori)
                 .into(imgKategori)

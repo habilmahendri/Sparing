@@ -64,13 +64,14 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
         Log.e("lobby detail", lobby.catatan)
 
         val notif = Notif(
-                full_name = lobby.full_name,
-                id_notif = lobby.id_lobby,
-                id_lobby = lobby.id_lobby,
-                username = lobby.username,
-                tanggal = lobby.tanggal,
-                kategori = lobby.kategori,
-                username_lawan =  username
+            full_name = lobby.full_name,
+            id_notif = lobby.id_lobby,
+            id_lobby = lobby.id_lobby,
+            username = lobby.username,
+            tanggal = lobby.tanggal,
+            kategori = lobby.kategori,
+            username_lawan = username,
+            waktu = lobby.waktu
         )
 
 
@@ -86,7 +87,7 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
                 window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
 
                 btn_update.setOnClickListener {
-                    mPresenter.sendLawan(edt_tim.text.toString(),lobby.id_lobby)
+                    mPresenter.sendLawan(edt_tim.text.toString(), lobby.id_lobby)
                 }
 
             }
@@ -95,13 +96,13 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
             btn_lobby.setOnClickListener {
 
                 tv_tittle.text = "Kamu yakin melawan dia?"
-                tv_deks.text = "Setelah bergabung ke dalam Lobby Pertandingan. Pastikan tim kamu hadir pada saat pertandingan. Jangan buat lawan tanding mu kecewa."
+                tv_deks.text =
+                    "Setelah bergabung ke dalam Lobby Pertandingan. Pastikan tim kamu hadir pada saat pertandingan. Jangan buat lawan tanding mu kecewa."
                 btn_logout.text = "Ya, kami main"
                 btn_kembali.text = "kembali"
 
                 btn_logout.setOnClickListener {
-                    mPresenter.sendNotif(lobby.username!!,notif)
-//                    mPresenter.sendNotif(notif, notif.id_notif!!)
+                    mPresenter.sendNotif(lobby.username!!, notif)
                     dialog.hide()
                     dialog.setContentView(R.layout.item_dialog_success)
                     val btn_success = dialog.findViewById(R.id.btn_success) as Button
@@ -127,6 +128,7 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
 
         }
     }
+
     override fun showNotif() {
         this.toast("Minta bergabung")
     }

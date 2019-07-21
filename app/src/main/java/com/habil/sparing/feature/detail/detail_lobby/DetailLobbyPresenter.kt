@@ -38,20 +38,6 @@ class DetailLobbyPresenter(val mView: DetailLobbyContract.View) : DetailLobbyCon
         })
     }
 
-//    override fun sendNotif(username: Notif, id_notif: String) {
-//        reference = FirebaseDatabase.getInstance().reference.child("notif").child(username.username!!).child(id_notif)
-//        reference!!.addValueEventListener(object : ValueEventListener {
-//            override fun onDataChange(dataSnapshot: DataSnapshot) {
-//                dataSnapshot.ref.setValue(username)
-//                mView.showNotif()
-//            }
-//
-//            override fun onCancelled(databaseError: DatabaseError) {
-//
-//            }
-//        })
-//    }
-
     override fun sendLawan(team_lawan: String, id_lobby: String) {
         reference = FirebaseDatabase.getInstance().reference.child("lobby").child(id_lobby)
         reference!!.addListenerForSingleValueEvent(object : ValueEventListener {

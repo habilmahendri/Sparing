@@ -23,32 +23,28 @@ class LobbyAdapter(private val context: Context, private val lobby: List<Lobby>)
 
     override fun getItemCount(): Int = lobby.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(lobby[position])
-    }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bindItem(lobby[position])
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val imgKategori = view.findViewById<ImageView>(R.id.imgKategori)
-        private val btnMasukRuangLobby = view.findViewById<Button>(R.id.btnMasukRuangLobby)
 
         fun bindItem(lobby: Lobby) {
             Glide.with(itemView)
                 .load(lobby.kategori)
                 .into(imgKategori)
             itemView.tvUsername.text = lobby.username
-
             itemView.tvJudul.text = lobby.judul
             itemView.tvTanggal.text = lobby.tanggal
-            itemView.tvWaktu.text = "${lobby.waktu} - ${lobby.selesai} "
+            itemView.tvWaktu.text = lobby.waktu
             itemView.tvTeam.text = lobby.team_name
-            itemView.tvTeamLawan.text = lobby.team_lawan
+            if (lobby.team_lawan != null) itemView.tvTeamLawan.text = lobby.team_lawan
+            else itemView.tvTeamLawan.text = "..."
 
             itemView.btnMasukRuangLobby.setOnClickListener {
                 itemView.context.startActivity<DetailLobbyActivity>("id" to lobby.id_lobby)
-
             }
-
         }
+
     }
 }

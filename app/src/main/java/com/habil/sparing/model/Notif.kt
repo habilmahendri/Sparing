@@ -8,6 +8,7 @@ data class Notif(
         val username: String? = "",
         val kategori: String? = "",
         val tanggal: String = "",
-        val username_lawan: String? = ""
+        val username_lawan: String? = "",
+        val waktu: String? = ""
 
 )

@@ -10,4 +10,7 @@
     <color name="white">#fff</color>
     <color name="black">#111</color>
     <color name="colorOrange">#FFA731</color>
+    <color name="colorKategoriFutsal">#AF9CB7</color>
+    <color name="colorKategoriBasket">#C96673</color>
+    <color name="colorKategoriBadminton">#97DFC1</color>
 </resources>

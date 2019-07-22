@@ -95,9 +95,8 @@ class DetailLobbyActivity : AppCompatActivity(), DetailLobbyContract.View {
             btn_lobby.text = "Join"
             btn_lobby.setOnClickListener {
 
-                tv_tittle.text = "Kamu yakin melawan dia?"
-                tv_deks.text =
-                    "Setelah bergabung ke dalam Lobby Pertandingan. Pastikan tim kamu hadir pada saat pertandingan. Jangan buat lawan tanding mu kecewa."
+                tv_tittle.text = getString(R.string.tittle)
+                tv_deks.text =getString(R.string.deks)
                 btn_logout.text = "Ya, kami main"
                 btn_kembali.text = "kembali"
 

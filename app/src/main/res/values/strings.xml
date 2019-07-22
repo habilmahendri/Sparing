@@ -61,4 +61,6 @@
         bertanding!
     </string>
     <string name="silakan_masukan_nama_tim_lawan">Silakan masukan nama tim lawan</string>
+    <string name="tittle">Kamu yakin melawan dia?</string>
+    <string name="deks">Setelah bergabung ke dalam Lobby Pertandingan. Pastikan tim kamu hadir pada saat pertandingan. Jangan buat lawan tanding mu kecewa.</string>
 </resources>

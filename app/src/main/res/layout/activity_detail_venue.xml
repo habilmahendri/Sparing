@@ -178,7 +178,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:id="@+id/rvFasilitas"
-                        android:layout_marginBottom="16dp" />
+                        android:layout_marginBottom="16dp"
+                        app:spanCount="2"
+                        tools:itemCount="6"
+                        tools:layoutManager="android.support.v7.widget.GridLayoutManager"
+                        tools:listitem="@layout/item_fasilitas"/>
 
                 </LinearLayout>
 

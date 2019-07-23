@@ -10,7 +10,7 @@ import android.widget.Button
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.habil.sparing.R
-import com.habil.sparing.feature.profile.profile_lawan.ProfileLawanActivity
+import com.habil.sparing.feature.profile.ProfileActivity
 import com.habil.sparing.model.Lobby
 import com.habil.sparing.model.Notif
 import kotlinx.android.synthetic.main.item_notif.view.*
@@ -49,7 +49,7 @@ class NotifAdapter(private val context: Context, private val notif: List<Notif>)
             itemView.tvWaktu.text = notif.waktu
 
             itemView.setOnClickListener {
-                itemView.context.startActivity<ProfileLawanActivity>("username" to notif.username_lawan,
+                itemView.context.startActivity<ProfileActivity>("username" to notif.username_lawan,
                     "id_lobby" to notif.id_lobby)
             }
         }

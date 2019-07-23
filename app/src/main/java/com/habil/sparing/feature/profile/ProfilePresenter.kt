@@ -52,4 +52,20 @@ class ProfilePresenter(private val view: ProfileContract.View)
     }
 
 
+    override fun getDetailProfileLawan(username: String) {
+        reference = FirebaseDatabase.getInstance().reference.child("Users").child(username)
+        reference!!.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.e("Error Profile ", databaseError.message)
+            }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                user = dataSnapshot!!.getValue(User::class.java)!!
+                view.showDetailProfile(user)
+                view.lihatPertandingan()
+            }
+
+        })
+    }
+
 }

@@ -1,24 +1,24 @@
 package com.habil.sparing.feature.profile
 
-import android.content.Intent
-import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
 import android.view.MenuItem
 import android.view.View
 import com.habil.adoption.data.PreferencesHelper
 import com.habil.sparing.R
+import com.habil.sparing.feature.detail.detail_lobby.DetailLobbyActivity
 import com.habil.sparing.model.User
 import kotlinx.android.synthetic.main.activity_profile.*
-import kotlinx.android.synthetic.main.activity_register.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
+
 
 class ProfileActivity : AppCompatActivity(), ProfileContract.View {
 
 
     private lateinit var presenter: ProfilePresenter
     private lateinit var preferencesHelper: PreferencesHelper
+    private var idPertandingan: String? = null
 
     var editProfile:Boolean = false
 
@@ -32,9 +32,20 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
 
         preferencesHelper = PreferencesHelper()
         val username = preferencesHelper.getNameUser(this)
+        val usernameLawan = intent.getStringExtra("username")
+        idPertandingan = intent.getStringExtra("id_lobby")
 
         presenter = ProfilePresenter(this)
-        presenter.getDetailProfile(username!!)
+
+        if (usernameLawan == null) {
+            presenter.getDetailProfile(username!!)
+            btnWhatsapp.visibility = View.GONE
+        }
+        else {
+            presenter.getDetailProfileLawan(usernameLawan)
+            btnWhatsapp.visibility = View.VISIBLE
+            btnUpdateProfile.text = "Lihat Pertandingan"
+        }
 
 
 
@@ -67,6 +78,12 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
         edtUsername.setText(user.user_name)
         edtEmail.setText(user.email)
         edtPhoneNumber.setText(user.phone_number)
+    }
+
+    override fun lihatPertandingan() {
+        btnUpdateProfile.setOnClickListener {
+            startActivity<DetailLobbyActivity>("id" to idPertandingan )
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

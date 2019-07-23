@@ -8,10 +8,12 @@ interface ProfileContract {
         fun showEditProfile()
 
         fun showDetailProfile(user: User)
+        fun lihatPertandingan()
     }
 
     interface Presenter {
         fun getDetailProfile(username: String)
         fun editProfile(user: User)
+        fun getDetailProfileLawan(username: String)
     }
 }

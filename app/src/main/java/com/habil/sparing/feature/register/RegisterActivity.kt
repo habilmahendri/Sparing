@@ -11,9 +11,8 @@ import com.habil.sparing.model.User
 import kotlinx.android.synthetic.main.activity_register.*
 import org.jetbrains.anko.toast
 
-class RegisterActivity : AppCompatActivity(), RegisterContract.View  {
+class RegisterActivity : AppCompatActivity(), RegisterContract.View {
     lateinit var mPresenter: RegisterPresenter
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +20,8 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View  {
         setContentView(R.layout.activity_register)
         cb_term.text = HtmlCompat.fromHtml(
             "I Read and agree to <font color='#0071D0'><u>Terms & Conditions</u></font>",
-            HtmlCompat.FROM_HTML_MODE_LEGACY)
+            HtmlCompat.FROM_HTML_MODE_LEGACY
+        )
         mPresenter = RegisterPresenter(this)
 
         btn_register.setOnClickListener {
@@ -36,7 +36,12 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View  {
             ) {
                 if (cb_term.isChecked) {
                     val user = User(
-                        full_name = edt_fullname.text.toString(),email = edt_email.text.toString(),user_name = edt_username.text.toString(),phone_number = edt_phone.text.toString(),team_name = edt_teamName.text.toString(),password = edt_password.text.toString()
+                        full_name = edt_fullname.text.toString(),
+                        email = edt_email.text.toString(),
+                        user_name = edt_username.text.toString(),
+                        phone_number = edt_phone.text.toString(),
+                        team_name = edt_teamName.text.toString(),
+                        password = edt_password.text.toString()
                     )
                     mPresenter.getUser(user)
                 } else {
@@ -52,7 +57,6 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View  {
 
             }
         }
-
 
 
     }

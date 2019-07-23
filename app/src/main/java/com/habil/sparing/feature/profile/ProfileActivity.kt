@@ -1,10 +1,7 @@
 package com.habil.sparing.feature.profile
 
-import android.content.Intent
-import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
 import android.view.MenuItem
 import android.view.View
 import com.habil.adoption.data.PreferencesHelper
@@ -15,11 +12,15 @@ import kotlinx.android.synthetic.main.activity_profile.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
+
 class ProfileActivity : AppCompatActivity(), ProfileContract.View {
+
 
     private lateinit var presenter: ProfilePresenter
     private lateinit var preferencesHelper: PreferencesHelper
     private var idPertandingan: String? = null
+
+    var editProfile:Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +46,30 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
             btnWhatsapp.visibility = View.VISIBLE
             btnUpdateProfile.text = "Lihat Pertandingan"
         }
+
+
+
+        btnUpdateProfile.setOnClickListener {
+
+            editProfile = true
+
+            edtFullname.isEnabled = true
+            edtUsername.isEnabled = true
+            edtEmail.isEnabled = true
+            edtPhoneNumber.isEnabled = true
+
+            if (editProfile) {
+                btnUpdateProfile.setOnClickListener {
+                    toast("editprofile true")
+                }
+            }
+        }
+
+
+
+    }
+
+    override fun showEditProfile() {
 
     }
 

@@ -11,10 +11,6 @@ import android.content.pm.PackageInfo
 import android.net.Uri
 import android.support.v4.content.ContextCompat.startActivity
 
-
-
-
-
 class ProfilePresenter(private val view: ProfileContract.View)
     : ProfileContract.Presenter {
 
@@ -35,6 +31,26 @@ class ProfilePresenter(private val view: ProfileContract.View)
 
         })
     }
+
+    override fun editProfile(user: User) {
+        reference = FirebaseDatabase.getInstance().reference.child("Users").child(user.user_name)
+        reference!!.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                Log.e("edit profile",user.user_name)
+                if (dataSnapshot.exists()) {
+
+                } else {
+                    dataSnapshot.ref.setValue(user)
+                    view.showEditProfile()
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+
+            }
+        })
+    }
+
 
     override fun getDetailProfileLawan(username: String) {
         reference = FirebaseDatabase.getInstance().reference.child("Users").child(username)

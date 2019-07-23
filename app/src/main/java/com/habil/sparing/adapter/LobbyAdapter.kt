@@ -28,11 +28,16 @@ class LobbyAdapter(private val context: Context, private val lobby: List<Lobby>)
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val imgKategori = view.findViewById<ImageView>(R.id.imgKategori)
+        private val imgProfile = view.findViewById<ImageView>(R.id.imgProfile)
 
         fun bindItem(lobby: Lobby) {
-            Glide.with(itemView)
-                .load(lobby.kategori)
-                .into(imgKategori)
+            imgProfile.setImageResource(R.drawable.ic_profile_notif)
+
+            var kategori = lobby.kategori
+            if (kategori == "Futsal") imgKategori.setImageResource(R.drawable.ic_football_icon)
+            else if (kategori == "Basket") imgKategori.setImageResource(R.drawable.ic_basketball_icon)
+            else imgKategori.setImageResource(R.drawable.ic_shuttlecock_icon)
+
             itemView.tvUsername.text = lobby.full_name
             itemView.tvJudul.text = lobby.judul
             itemView.tvTanggal.text = lobby.tanggal

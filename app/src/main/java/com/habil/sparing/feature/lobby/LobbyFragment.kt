@@ -4,6 +4,7 @@ package com.habil.sparing.feature.lobby
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,7 @@ class LobbyFragment : Fragment(), LobbyContract.View {
 
     private var listLobby: MutableList<Lobby> = mutableListOf()
     private lateinit var presenter: LobbyPresenter
+    var kategori: String? = null
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

@@ -1,6 +1,7 @@
 package com.habil.sparing.feature.home
 
 import com.habil.sparing.model.Event
+import com.habil.sparing.model.Lobby
 import com.habil.sparing.model.Venue
 
 interface HomeContract {

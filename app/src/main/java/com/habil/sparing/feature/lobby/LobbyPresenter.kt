@@ -2,9 +2,16 @@ package com.habil.sparing.feature.lobby
 
 import com.google.firebase.database.*
 import com.habil.sparing.model.Lobby
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.DatabaseReference
+
+
+
+
 
 
 class LobbyPresenter(private val view: LobbyContract.View) : LobbyContract.Presenter {
+
     var reference: DatabaseReference?= null
     var list: MutableList<Lobby> = mutableListOf()
 

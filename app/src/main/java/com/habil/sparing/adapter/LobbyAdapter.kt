@@ -33,11 +33,12 @@ class LobbyAdapter(private val context: Context, private val lobby: List<Lobby>)
             Glide.with(itemView)
                 .load(lobby.kategori)
                 .into(imgKategori)
-            itemView.tvUsername.text = lobby.username
+            itemView.tvUsername.text = lobby.full_name
             itemView.tvJudul.text = lobby.judul
             itemView.tvTanggal.text = lobby.tanggal
             itemView.tvWaktu.text = lobby.waktu
             itemView.tvTeam.text = lobby.team_name
+
             if (lobby.team_lawan != null) itemView.tvTeamLawan.text = lobby.team_lawan
             else itemView.tvTeamLawan.text = "..."
 

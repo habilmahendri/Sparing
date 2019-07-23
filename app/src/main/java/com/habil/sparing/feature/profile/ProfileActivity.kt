@@ -11,12 +11,16 @@ import com.habil.adoption.data.PreferencesHelper
 import com.habil.sparing.R
 import com.habil.sparing.model.User
 import kotlinx.android.synthetic.main.activity_profile.*
+import kotlinx.android.synthetic.main.activity_register.*
 import org.jetbrains.anko.toast
 
 class ProfileActivity : AppCompatActivity(), ProfileContract.View {
 
+
     private lateinit var presenter: ProfilePresenter
     private lateinit var preferencesHelper: PreferencesHelper
+
+    var editProfile:Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +35,30 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
 
         presenter = ProfilePresenter(this)
         presenter.getDetailProfile(username!!)
+
+
+
+        btnUpdateProfile.setOnClickListener {
+
+            editProfile = true
+
+            edtFullname.isEnabled = true
+            edtUsername.isEnabled = true
+            edtEmail.isEnabled = true
+            edtPhoneNumber.isEnabled = true
+
+            if (editProfile) {
+                btnUpdateProfile.setOnClickListener {
+                    toast("editprofile true")
+                }
+            }
+        }
+
+
+
+    }
+
+    override fun showEditProfile() {
 
     }
 

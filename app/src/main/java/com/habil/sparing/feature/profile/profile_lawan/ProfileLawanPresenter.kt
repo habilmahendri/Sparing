@@ -7,7 +7,7 @@ import com.habil.sparing.feature.profile.ProfileContract
 
 
 class ProfileLawanPresenter(private val view: ProfileLawanContract.View)
-    : ProfileContract.Presenter {
+    : ProfileLawanContract.Presenter {
 
     var reference: DatabaseReference? = null
     lateinit var  user: User

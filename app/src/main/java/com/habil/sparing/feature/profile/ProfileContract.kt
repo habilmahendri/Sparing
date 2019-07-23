@@ -5,10 +5,13 @@ import com.habil.sparing.model.User
 interface ProfileContract {
 
     interface View {
+        fun showEditProfile()
+
         fun showDetailProfile(user: User)
     }
 
     interface Presenter {
         fun getDetailProfile(username: String)
+        fun editProfile(user: User)
     }
 }

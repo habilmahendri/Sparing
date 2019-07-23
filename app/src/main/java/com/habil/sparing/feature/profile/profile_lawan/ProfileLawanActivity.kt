@@ -26,6 +26,8 @@ class ProfileLawanActivity : AppCompatActivity(), ProfileLawanContract.View {
 
         mPresenter = ProfileLawanPresenter(this)
         mPresenter.getDetailProfile(usernameLawan)
+
+
     }
 
     override fun showDetailProfile(user: User) {

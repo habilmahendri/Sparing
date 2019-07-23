@@ -48,25 +48,6 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
         }
 
 
-
-        btnUpdateProfile.setOnClickListener {
-
-            editProfile = true
-
-            edtFullname.isEnabled = true
-            edtUsername.isEnabled = true
-            edtEmail.isEnabled = true
-            edtPhoneNumber.isEnabled = true
-
-            if (editProfile) {
-                btnUpdateProfile.setOnClickListener {
-                    toast("editprofile true")
-                }
-            }
-        }
-
-
-
     }
 
     override fun showEditProfile() {

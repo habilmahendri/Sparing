@@ -13,10 +13,6 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".feature.profile.profile_lawan.ProfileLawanActivity">
-        </activity>
-        <activity android:name=".feature.detail.DetailProfileLawanActivity">
-        </activity>
         <activity android:name=".feature.post_lobby.post_lobby.PostLobbyActivity">
         </activity>
         <activity android:name=".feature.post_lobby.LocationLobby">

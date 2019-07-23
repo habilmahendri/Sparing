@@ -14,7 +14,8 @@
     <string name="lobby">Lobby</string>
     <string name="info_amp_event"><![CDATA[Info & Event]]></string>
     <string name="lihat_semua">Lihat Semua</string>
-    <string name="match_lobby">Lagi gak ada lawan ? atau mungkin temanmu berhalangan tanding ? Buat pertandingan di
+    <string name="match_lobby">Lagi gak ada lawan ? atau mungkin temanmu berhalangan tanding ? Buat
+        pertandingan di
         Match lobby dan cari lawan tanding mu
     </string>
     <string name="title_activity_main2">Main2Activity</string>
@@ -24,7 +25,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="logout_desc">Jangan lama-lama ya. Berhenti berolahraga dalam waktu yang cukup lama bisa membuat
+    <string name="logout_desc">Jangan lama-lama ya. Berhenti berolahraga dalam waktu yang cukup lama
+        bisa membuat
         otot-otot kamu bete, kami menunggumu!
     </string>
     <string name="buat_lobby_pertandingan">Buat Lobby Pertandingan</string>
@@ -32,12 +34,17 @@
     <string name="ceritakan_tenting_pertangan_nanti">Ceritakan tentang pertandingan nanti</string>
     <string name="peta">Peta</string>
     <string name="official">Official</string>
-    <string name="dummy_text_location">No Rawalumbu Bekasi, Jl. Lumbu Utara 2 No.76, Bojong Rawalumbu, Kota Bks</string>
+    <string name="dummy_text_location">No Rawalumbu Bekasi, Jl. Lumbu Utara 2 No.76, Bojong
+        Rawalumbu, Kota Bks
+    </string>
     <string name="mulai_dari">Mulai dari</string>
     <string name="fasilitas">Fasilitas</string>
-    <string name="dummy_text_deskripsi">Lapangan futsal ini berlokasi di Jalan Laskar Raya No.54, RT.001/RW.002, Pekayon
-        Jaya, Bekasi Selatan, Pekayon Jaya, Bekasi Sel., Kota Bks, Jawa Barat 17148. Jika teman -teman ingin me-review
-        lapangan futsal ini, silahkan gunakan formulir review dibawah. Dan jangan lupa tambahkan foto pendukung. Salam
+    <string name="dummy_text_deskripsi">Lapangan futsal ini berlokasi di Jalan Laskar Raya No.54,
+        RT.001/RW.002, Pekayon
+        Jaya, Bekasi Selatan, Pekayon Jaya, Bekasi Sel., Kota Bks, Jawa Barat 17148. Jika teman
+        -teman ingin me-review
+        lapangan futsal ini, silahkan gunakan formulir review dibawah. Dan jangan lupa tambahkan
+        foto pendukung. Salam
         Futsal!
     </string>
     <string name="kategori">Kategori</string>
@@ -57,11 +64,14 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="create_account">Create Account</string>
     <string name="full_name">Full Name</string>
-    <string name="success_message">Sampai jumpa diwaktu pertandingan. Persiapkan Tim kamu sebaik mungkin. Selamat
+    <string name="success_message">Sampai jumpa diwaktu pertandingan. Persiapkan Tim kamu sebaik
+        mungkin. Selamat
         bertanding!
     </string>
     <string name="silakan_masukan_nama_tim_lawan">Silakan masukan nama tim lawan</string>
     <string name="tittle">Kamu yakin melawan dia?</string>
-    <string name="deks">Setelah bergabung ke dalam Lobby Pertandingan. Pastikan tim kamu hadir pada saat pertandingan. Jangan buat lawan tanding mu kecewa.</string>
+    <string name="deks">Setelah bergabung ke dalam Lobby Pertandingan. Pastikan tim kamu hadir pada
+        saat pertandingan. Jangan buat lawan tanding mu kecewa.
+    </string>
     <string name="whatsapp_lawan">Whatsapp Lawan</string>
 </resources>

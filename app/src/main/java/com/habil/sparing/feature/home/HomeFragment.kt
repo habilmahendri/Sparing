@@ -10,14 +10,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.habil.adoption.data.PreferencesHelper
-
 import com.habil.sparing.R
+
 import com.habil.sparing.adapter.EventAdapter
 import com.habil.sparing.adapter.VanueHomeAdapter
+import com.habil.sparing.feature.lobby.lobby_kategori.LobbyKategoriActivity
 import com.habil.sparing.feature.post_lobby.CreateLobbyActivity
 import com.habil.sparing.model.Event
 import com.habil.sparing.model.Venue
 import kotlinx.android.synthetic.main.fragment_home.*
+
+
+
+
 
 
 class HomeFragment : Fragment(), HomeContract.View {
@@ -50,6 +55,23 @@ class HomeFragment : Fragment(), HomeContract.View {
             view.context.startActivity(Intent(context, CreateLobbyActivity::class.java))
         }
 
+        cardFutsal.setOnClickListener {
+            val intent = Intent(activity, LobbyKategoriActivity::class.java)
+            intent.putExtra("kategori", "Futsal")
+            startActivity(intent)
+        }
+
+        cardBadminton.setOnClickListener {
+            val intent = Intent(activity, LobbyKategoriActivity::class.java)
+            intent.putExtra("kategori", "Badminton")
+            startActivity(intent)
+        }
+
+        cardBasket.setOnClickListener {
+            val intent = Intent(activity, LobbyKategoriActivity::class.java)
+            intent.putExtra("kategori", "Basket")
+            startActivity(intent)
+        }
     }
 
     override fun showEvent(event: MutableList<Event>) {
@@ -62,6 +84,5 @@ class HomeFragment : Fragment(), HomeContract.View {
         rv_vanue?.layoutManager = layoutManager
         rv_vanue?.adapter = VanueHomeAdapter(vanue,context)
     }
-
 
 }

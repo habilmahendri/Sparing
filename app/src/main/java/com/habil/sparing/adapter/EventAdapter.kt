@@ -9,8 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.habil.sparing.R
+import com.habil.sparing.feature.detail.detail_event.DetailEventActivity
 import com.habil.sparing.model.Event
 import kotlinx.android.synthetic.main.item_event_home.view.*
+import org.jetbrains.anko.startActivity
 
 class EventAdapter (val event: MutableList<Event>, val context: Context?) :
     RecyclerView.Adapter<EventAdapter.ViewHolder>() {
@@ -34,6 +36,10 @@ class EventAdapter (val event: MutableList<Event>, val context: Context?) :
             Glide.with(itemView)
                 .load(event.image)
                 .into(itemView.img_event)
+
+            itemView.setOnClickListener {
+                itemView.context.startActivity<DetailEventActivity>("id" to event.id_event)
+            }
         }
     }
 

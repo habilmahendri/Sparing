@@ -1,6 +1,7 @@
 package com.habil.sparing.adapter
 
 import android.content.Context
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,9 @@ import com.habil.sparing.R
 import com.habil.sparing.feature.detail.detail_lobby.DetailLobbyActivity
 import com.habil.sparing.model.Lobby
 import kotlinx.android.synthetic.main.item_lobby.view.*
+import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.newTask
+import org.jetbrains.anko.singleTop
 import org.jetbrains.anko.startActivity
 
 class LobbyAdapter(private val context: Context, private val lobby: List<Lobby>) :
@@ -48,7 +52,10 @@ class LobbyAdapter(private val context: Context, private val lobby: List<Lobby>)
             else itemView.tvTeamLawan.text = "..."
 
             itemView.btnMasukRuangLobby.setOnClickListener {
-                itemView.context.startActivity<DetailLobbyActivity>("id" to lobby.id_lobby)
+
+                //itemView.context.startActivity<DetailLobbyActivity>("id" to lobby.id_lobby)
+                itemView.context.startActivity(  itemView.context.intentFor<DetailLobbyActivity>("id" to lobby.id_lobby).newTask())
+
             }
         }
 
